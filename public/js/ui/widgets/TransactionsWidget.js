@@ -1,9 +1,10 @@
+'use strict'
 /**
  * Класс TransactionsWidget отвечает за
  * открытие всплывающих окон для
  * создания нового дохода или расхода
  * */
-class TransactionsWidget {
+class TransactionsWidget extends BaseWidget {
   /**
    * Устанавливает полученный элемент
    * в свойство element.
@@ -11,7 +12,8 @@ class TransactionsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    super ( element );
+    this.registerEvents();
   }
   /**
    * Регистрирует обработчики нажатия на
@@ -20,6 +22,9 @@ class TransactionsWidget {
    * экземпляра окна
    * */
   registerEvents() {
-
+    let incomeButton = this.element.querySelector('.create-income-button');
+    let expenseButton = this.element.querySelector('.create-expense-button');
+    incomeButton.addEventListener('click', () => App.getModal( 'newIncome' ).open());
+    expenseButton.addEventListener('click', () => App.getModal( 'newExpense' ).open());
   }
 }

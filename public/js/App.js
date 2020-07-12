@@ -31,9 +31,7 @@ class App {
    * состояние 'init'
    * */
   static initUser() {
-    User.fetch(User.current(), () =>
-      this.setState( User.current() ? 'user-logged' : 'init' )
-    );
+    this.setState( User.current() ? 'user-logged' : 'init' );
   }
 
   /**
@@ -202,3 +200,4 @@ class App {
     this.getForm( 'createExpense' ).renderAccountsList();
   }
 }
+
