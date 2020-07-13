@@ -42,8 +42,10 @@ class Sidebar {
 
   static initSelectColor() {
     const selectColor = document.querySelector('#color-list');
+    [...selectColor.children].forEach( element => { element.value == App.skin && element.setAttribute('selected', true);
+      
+    });
     selectColor.addEventListener('change', (e) => {
-      //document.body.className = 'sidebar-mini app ' + e.target.value;
       window.localStorage.color = e.target.value;
       location.reload();
     })

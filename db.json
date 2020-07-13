@@ -64,6 +64,11 @@
       "name": "Счет 3",
       "user_id": "3efhz22whkc9jlrvz",
       "id": "3efhzgxskcj62rbv"
+    },
+    {
+      "name": "Счет 4",
+      "user_id": "3efhz22whkc9jlrvz",
+      "id": "3efhz17vwkckgki1h"
     }
   ],
   "transactions": [
@@ -363,30 +368,6 @@
       "created_at": "2020-07-12T14:23:52.543Z"
     },
     {
-      "id": "3efhzh0pkcj653cd",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:24:02.604Z"
-    },
-    {
-      "id": "3efhzh10kcj65s2o",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:24:34.655Z"
-    },
-    {
-      "id": "3efhzh1zkcj666ji",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:24:53.405Z"
-    },
-    {
       "id": "3efhzh2jkcj66de7",
       "type": "EXPENSE",
       "name": "Покупки",
@@ -403,60 +384,92 @@
       "created_at": "2020-07-12T14:25:52.966Z"
     },
     {
-      "id": "3efhzh3zkcj73c37",
+      "id": "3efhzxrkkck9r1uj",
       "type": "EXPENSE",
       "name": "Покупки",
       "sum": 1000,
       "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:50:40.242Z"
+      "created_at": "2020-07-13T08:52:52.122Z"
     },
     {
-      "id": "3efhzi6qkcj73ik5",
-      "type": "EXPENSE",
+      "id": "3efhz1426kcke7tww",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "3efhz141mkcke7li2",
+      "created_at": "2020-07-13T10:57:53.455Z"
+    },
+    {
+      "id": "3efhz15z8kckfbf9q",
+      "type": "INCOME",
       "name": "Покупки",
       "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:50:48.628Z"
+      "account_id": "3efhzlggkchly7tp",
+      "created_at": "2020-07-13T11:28:40.717Z"
     },
     {
-      "id": "3efhzi6xkcj73oqz",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:50:56.650Z"
-    },
-    {
-      "id": "3efhzi78kcj73yej",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:51:09.162Z"
-    },
-    {
-      "id": "3efhzi7kkcj74bun",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 1000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T14:51:26.590Z"
-    },
-    {
-      "id": "3efhzk03kcj85qr3",
-      "type": "EXPENSE",
-      "name": "Покупки",
-      "sum": 2000,
-      "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T15:20:32.174Z"
-    },
-    {
-      "id": "3efhzk0okcj860zn",
-      "type": "EXPENSE",
-      "name": "Покупки",
+      "id": "3efhz15zukckfbyub",
+      "type": "INCOME",
+      "name": "Зарплата",
       "sum": 3000,
+      "account_id": "3efhz15z1kckfb808",
+      "created_at": "2020-07-13T11:29:06.082Z"
+    },
+    {
+      "id": "3efhz1687kckfoggx",
+      "type": "INCOME",
+      "name": "Покупки",
+      "sum": 1000,
+      "account_id": "1",
+      "created_at": "2020-07-13T11:38:48.800Z"
+    },
+    {
+      "id": "3efhz16h8kckfooq8",
+      "type": "EXPENSE",
+      "name": "Покупки",
+      "sum": 1000,
+      "account_id": "1",
+      "created_at": "2020-07-13T11:38:59.503Z"
+    },
+    {
+      "id": "3efhz16hkkckfowlw",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 5000,
+      "account_id": "1",
+      "created_at": "2020-07-13T11:39:09.715Z"
+    },
+    {
+      "id": "3efhz178zkckg96cm",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
       "account_id": "3efhzgxskcj62rbv",
-      "created_at": "2020-07-12T15:20:45.442Z"
+      "created_at": "2020-07-13T11:54:55.461Z"
+    },
+    {
+      "id": "3efhz17p0kckghdcf",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "3efhz17nykckggcjj",
+      "created_at": "2020-07-13T12:01:17.774Z"
+    },
+    {
+      "id": "3efhz17wfkckgkp7w",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "3efhz17vwkckgki1h",
+      "created_at": "2020-07-13T12:03:53.131Z"
+    },
+    {
+      "id": "3efhz17y8kckglwkp",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "3efhzlggkchly7tp",
+      "created_at": "2020-07-13T12:04:49.320Z"
     }
   ]
 }
