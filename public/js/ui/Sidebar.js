@@ -11,6 +11,7 @@ class Sidebar {
   static init() {
     this.initAuthLinks();
     this.initToggleButton();
+    this.initSelectColor();
   }
 
   /**
@@ -37,5 +38,14 @@ class Sidebar {
     registerLink.addEventListener( 'click', () => App.getModal( 'register' ).open() );
     loginLink.addEventListener( 'click', () => App.getModal( 'login' ).open() );
     logoutLink.addEventListener( 'click', () => User.logout() );
+  }
+
+  static initSelectColor() {
+    const selectColor = document.querySelector('#color-list');
+    selectColor.addEventListener('change', (e) => {
+      //document.body.className = 'sidebar-mini app ' + e.target.value;
+      window.localStorage.color = e.target.value;
+      location.reload();
+    })
   }
 }
