@@ -31,7 +31,7 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static get( id = '', data, callback = f => f ) {
-    return createRequest({ method: 'GET', URL: this.URL, id: id, body: data }, callback );
+    return createRequest({ method: 'GET', URL: this.URL, body: data }, callback );
   }
 
   /**
@@ -40,7 +40,7 @@ class Entity {
    * */
   static remove( id = '', data, callback = f => f ) {
     data.append( '_method', 'DELETE' );
-    return createRequest({ method: 'POST', URL: this.URL, id: id, body: data }, callback )
+    return createRequest({ method: 'POST', URL: this.URL, body: data }, callback )
   }
 }
 
