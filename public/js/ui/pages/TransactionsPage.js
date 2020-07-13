@@ -50,7 +50,7 @@ class TransactionsPage {
     if ( !result ) return;
     const data = new FormData();
     data.append('id', this.lastOptions.account_id);
-    Account.remove( data, () => App.update() );
+    Account.remove( '', data, () => App.update() );
   }
 
   /**
@@ -64,7 +64,7 @@ class TransactionsPage {
     if ( !result ) return;
     const data = new FormData();
     data.append('id', element.dataset.id);
-    Transaction.remove( data, App.update.bind(App));
+    Transaction.remove( '', data, App.update.bind(App));
   }
 
   /**

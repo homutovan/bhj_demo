@@ -3,38 +3,32 @@
  * Основная функция для совершения запросов
  * на сервер.
  * */
-function createRequest ( options = {} ) {
+function createRequest ( options = {}, callback) {
     
-    if (!options.data && !(options.URL == '/user/logout')) return;
+    if (!options.body && !(options.URL == '/user/logout')) return;
 
     let URL = options.URL;
-    let data = '';
-
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
-    xhr.withCredentials = true;
-    xhr.addEventListener('readystatechange', function() {
-        if (this.readyState === this.DONE && this.status === 200) {
-            if (this.response && this.response.success) options.callback( this.response );
-            else if (this.response && this.response.error) alert( this.response.error );
-        }
-    })
+    let rOptions;
 
     if ( options.id ) URL += `/${ options.id }`
-    if ( options.method == 'GET' && options.data ) URL += encodeURL( options.data );
-    else data = options.data;
+    if ( options.method == 'GET' && options.body ) {
+        URL += encodeURL( options.body )
+        rOptions = {method: 'GET'}
+    }
+    else {
+        rOptions = {
+            method: options.method,
+            body: options.body
+        }
+    }
 
-    try {
-        xhr.open( options.method, URL );
-        xhr.send( data );
-    } catch( error ) {
-        alert( error );
-    } 
-    
-    return xhr;
+    fetch( URL, rOptions)
+    .then(response => response.json())
+    .then(data => callback(data))
+    .catch(error => alert(error));
 };
 
-function encodeURL (data) {
+function encodeURL ( data ) {
     if ( data ) return '?' + Object.entries( data )
     .map(([ key, value ]) => `${ key }=${ value }` )
     .join( '&' );
