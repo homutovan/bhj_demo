@@ -3,9 +3,9 @@
  * Основная функция для совершения запросов
  * на сервер.
  * */
-function createRequest ( options = {}, callback) {
+function createRequest ( options = {}, callback ) {
     
-    if (!options.body && !(options.URL == '/user/logout')) return;
+    if ( !options.body && !( options.URL == '/user/logout' )) return;
 
     let URL = options.URL;
 
@@ -16,9 +16,9 @@ function createRequest ( options = {}, callback) {
     }
 
     fetch( URL, options )
-    .then(response => response.json())
-    .then(data => callback( data ))
-    .catch(error => console.log( error ));
+    .then( response => response.json() )
+    .then( data => callback( data ))
+    .catch( error => console.log( error ));
 }
 
 function encodeURL ( data ) {

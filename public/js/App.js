@@ -11,7 +11,8 @@ class App {
   static init() {
     this.element = document.querySelector( '.app' );
     this.content = document.querySelector( '.content-wrapper' );
-    this.element.className = 'sidebar-mini app ' + window.localStorage.color;
+    this.skin = window.localStorage.color ? window.localStorage.color: 'skin-green';
+    this.element.className = 'sidebar-mini app ' + this.skin;
 
     this.initPages();
     this.initForms();

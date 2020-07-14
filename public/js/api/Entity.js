@@ -22,7 +22,7 @@ class Entity {
    * что наследуется от Entity)
    * */
   static create( data, callback = f => f ) {
-    data.append('_method', 'PUT')
+    data.append( '_method', 'PUT' )
     return createRequest({ method: 'POST', URL: this.URL, body: data }, callback );
   }
 

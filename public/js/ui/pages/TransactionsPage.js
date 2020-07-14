@@ -21,7 +21,7 @@ class TransactionsPage {
    * Вызывает метод render для отрисовки страницы
    * */
   update( options ) {
-    this.render( this.lastOptions ?  this.lastOptions : options);
+    this.render( this.lastOptions ?  this.lastOptions : options );
   }
 
   /**
@@ -31,9 +31,9 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
-    const removeAccount = this.element.querySelector('.remove-account');
-    this.element.addEventListener('click', e => this.removeTransaction( e.target.closest('.transaction__remove') ));
-    removeAccount.addEventListener('click', this.removeAccount.bind( this ));
+    const removeAccount = this.element.querySelector( '.remove-account' );
+    this.element.addEventListener( 'click', e => this.removeTransaction( e.target.closest( '.transaction__remove' )));
+    removeAccount.addEventListener( 'click', this.removeAccount.bind( this ));
   }
 
   /**
@@ -46,10 +46,10 @@ class TransactionsPage {
    * */
   removeAccount() {
     if ( !this.lastOptions ) return;
-    const result = confirm('Вы действительно хотите удалить счёт?');
+    const result = confirm( 'Вы действительно хотите удалить счёт?' );
     if ( !result ) return;
     const data = new FormData();
-    data.append('id', this.lastOptions.account_id);
+    data.append( 'id', this.lastOptions.account_id );
     Account.remove( '', data, () => App.update() );
   }
 
@@ -63,8 +63,8 @@ class TransactionsPage {
     const result = confirm('Вы действительно хотите удалить эту транзакцию?');
     if ( !result ) return;
     const data = new FormData();
-    data.append('id', element.dataset.id);
-    Transaction.remove( '', data, App.update.bind(App));
+    data.append( 'id', element.dataset.id );
+    Transaction.remove( '', data, App.update.bind( App ));
   }
 
   /**
@@ -86,7 +86,7 @@ class TransactionsPage {
    * Устанавливает заголовок: «Название счёта»
    * */
   clear() {
-    this.renderTransactions([]);
+    this.renderTransactions( [] );
     this.renderTitle( 'Название счёта' );
     this.lastOptions = null;
   }
@@ -95,7 +95,7 @@ class TransactionsPage {
    * Устанавливает заголовок в элемент .content-title
    * */
   renderTitle( name ) {
-    this.element.querySelector('.content-title').textContent = name;
+    this.element.querySelector( '.content-title' ).textContent = name;
   }
 
   /**
@@ -114,7 +114,7 @@ class TransactionsPage {
    * item - объект с информацией о транзакции
    * */
   getTransactionHTML( item ) {
-    return `<div class="transaction transaction_${ (item.type).toLowerCase() } row">
+    return `<div class="transaction transaction_${ item.type.toLowerCase() } row">
               <div class="col-md-7 transaction__details">
                 <div class="transaction__icon">
                     <span class="fa fa-money fa-2x"></span>
@@ -142,7 +142,7 @@ class TransactionsPage {
    * используя getTransactionHTML
    * */
   renderTransactions( data ) {
-    const content = this.element.querySelector('.content');
+    const content = this.element.querySelector( '.content' );
     content.innerHTML = '';
     data.forEach( item => content.insertAdjacentHTML( 'afterbegin', this.getTransactionHTML( item )))
   }
