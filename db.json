@@ -12,7 +12,7 @@
       "email": "homutovan@live.com",
       "password": "1234",
       "id": "3efhz22whkc9jlrvz",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "Ivan",
@@ -26,6 +26,20 @@
       "email": "roman@ivan.ru",
       "password": "1234",
       "id": "3efhz11elkcelu9ds",
+      "isAuthorized": false
+    },
+    {
+      "name": "andrey",
+      "email": "ahomutov@nntc.pro",
+      "password": "1234",
+      "id": "43ft4yxp2kgpbygz7",
+      "isAuthorized": false
+    },
+    {
+      "name": "qwerty",
+      "email": "qwerty@qwerty.ru",
+      "password": "1234",
+      "id": "43ft4yz7okgpcgalb",
       "isAuthorized": true
     }
   ],
@@ -69,6 +83,11 @@
       "name": "Счет 4",
       "user_id": "3efhz22whkc9jlrvz",
       "id": "3efhz17vwkckgki1h"
+    },
+    {
+      "name": "Покупки",
+      "user_id": "3efhz22whkc9jlrvz",
+      "id": "43ft4yxmwkgpbx230"
     }
   ],
   "transactions": [
@@ -470,6 +489,30 @@
       "sum": 20000,
       "account_id": "3efhzlggkchly7tp",
       "created_at": "2020-07-13T12:04:49.320Z"
+    },
+    {
+      "id": "43ft4yxzqkgpc0skw",
+      "type": "INCOME",
+      "name": "Покупки",
+      "sum": 1000,
+      "account_id": "3efhzlggkchly7tp",
+      "created_at": "2020-10-25T16:34:06.127Z"
+    },
+    {
+      "id": "43ft4yy0fkgpc1ay8",
+      "type": "EXPENSE",
+      "name": "Покупки",
+      "sum": 20000,
+      "account_id": "43ft4yxmwkgpbx230",
+      "created_at": "2020-10-25T16:34:29.939Z"
+    },
+    {
+      "id": "43ft4yy1vkgpc1t14",
+      "type": "EXPENSE",
+      "name": "Зарплата",
+      "sum": 5000,
+      "account_id": "43ft4yxmwkgpbx230",
+      "created_at": "2020-10-25T16:34:53.367Z"
     }
   ]
 }

@@ -12,7 +12,8 @@ class User {
 
   static URL = '/user';
 
-  static setCurrent( user ) {
+  static setCurrent(user) {
+    console.log(user)
     window.localStorage.user = JSON.stringify(user);
   }
 
@@ -29,7 +30,14 @@ class User {
    * из локального хранилища
    * */
   static current() {
-    return window.localStorage.user && JSON.parse( window.localStorage.user );
+    const currentUser = window.localStorage.user;
+    if (currentUser) {
+      try {
+        return JSON.parse(currentUser);
+      } catch {
+        return null;
+      } 
+    }
   }
 
   /**

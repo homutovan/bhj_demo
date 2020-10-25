@@ -12,7 +12,7 @@ class UserWidget extends BaseWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-    super ( element );
+    super (element);
   }
 
   /**
@@ -23,6 +23,10 @@ class UserWidget extends BaseWidget {
    * авторизованного пользователя
    * */
   update() {
-    this.element.querySelector('.user-name').textContent = User.current().name;
+    const current = User.current();
+    if (current) {
+      this.element.querySelector('.user-name')
+      .textContent = current.name;
+    }
   }
 }
