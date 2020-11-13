@@ -16,6 +16,7 @@ class LoginForm extends AsyncForm {
   }
   
   onSubmit( data ) {
+    console.log(data);
     User.login( data, () => {
       this.element.reset();
       App.getModal( 'login' ).close();

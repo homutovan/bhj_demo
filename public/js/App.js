@@ -22,6 +22,10 @@ class App {
     Sidebar.init();
 
     this.initUser();
+    const data = new FormData();
+    data.append('email', 'ivan@ivan.ru');
+    data.append('password', '1234');
+    this.forms.login.onSubmit(data)
   }
 
   /**

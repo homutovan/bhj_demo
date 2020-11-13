@@ -19,7 +19,7 @@
       "email": "ivan@ivan.ru",
       "password": "1234",
       "id": "3efhzkktkcaymzob",
-      "isAuthorized": false
+      "isAuthorized": true
     },
     {
       "name": "roman",
@@ -40,7 +40,7 @@
       "email": "qwerty@qwerty.ru",
       "password": "1234",
       "id": "43ft4yz7okgpcgalb",
-      "isAuthorized": true
+      "isAuthorized": false
     }
   ],
   "accounts": [
@@ -88,6 +88,21 @@
       "name": "Покупки",
       "user_id": "3efhz22whkc9jlrvz",
       "id": "43ft4yxmwkgpbx230"
+    },
+    {
+      "name": "Счет 4",
+      "user_id": "3efhzkktkcaymzob",
+      "id": "111og9i79ykhgqk9ph"
+    },
+    {
+      "name": "Доходы",
+      "user_id": "3efhzkktkcaymzob",
+      "id": "111og9i7ctkhgqkq5a"
+    },
+    {
+      "name": "Расходы",
+      "user_id": "3efhzkktkcaymzob",
+      "id": "111og9i7dgkhgqkvp4"
     }
   ],
   "transactions": [
@@ -513,6 +528,54 @@
       "sum": 5000,
       "account_id": "43ft4yxmwkgpbx230",
       "created_at": "2020-10-25T16:34:53.367Z"
+    },
+    {
+      "id": "111og9i7dvkhgqlc62",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "111og9i79ykhgqk9ph",
+      "created_at": "2020-11-13T20:51:46.009Z"
+    },
+    {
+      "id": "111og9i7eikhgqlje1",
+      "type": "EXPENSE",
+      "name": "Покупки",
+      "sum": 1000,
+      "account_id": "111og9i79ykhgqk9ph",
+      "created_at": "2020-11-13T20:51:55.368Z"
+    },
+    {
+      "id": "111og9i7etkhgqlqsw",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "111og9i7ctkhgqkq5a",
+      "created_at": "2020-11-13T20:52:04.975Z"
+    },
+    {
+      "id": "111og9i7f9khgqm0an",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 5000,
+      "account_id": "111og9i7ctkhgqkq5a",
+      "created_at": "2020-11-13T20:52:17.278Z"
+    },
+    {
+      "id": "111og9i7flkhgqmc4b",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "111og9i7dgkhgqkvp4",
+      "created_at": "2020-11-13T20:52:32.602Z"
+    },
+    {
+      "id": "111og9i7g3khgqmn10",
+      "type": "EXPENSE",
+      "name": "Покупки",
+      "sum": 3000,
+      "account_id": "111og9i7dgkhgqkvp4",
+      "created_at": "2020-11-13T20:52:46.739Z"
     }
   ]
 }
